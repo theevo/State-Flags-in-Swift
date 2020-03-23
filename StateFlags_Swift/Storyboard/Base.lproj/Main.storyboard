@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X06-2q-i44">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--State Collection View Controller-->
+        <scene sceneID="9HH-IT-lUy">
+            <objects>
+                <collectionViewController id="X06-2q-i44" customClass="StateCollectionViewController" customModule="StateFlags_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="amX-j7-KX9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QzW-nw-VLY">
+                            <size key="itemSize" width="192" height="177"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stateCell" id="o1O-Nc-Rzk" customClass="StateCollectionViewCell" customModule="StateFlags_Swift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="192" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xM2-UT-VST">
+                                    <rect key="frame" x="0.0" y="0.0" width="192" height="177"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fWi-oW-TyI">
+                                            <rect key="frame" x="8" y="8" width="176" height="161"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="1L8-Zk-egp">
+                                                    <rect key="frame" x="13" y="0.0" width="150" height="132.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="amt-Oz-CmD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEs-zR-ahl">
+                                                    <rect key="frame" x="67" y="140.5" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fWi-oW-TyI" firstAttribute="top" secondItem="xM2-UT-VST" secondAttribute="topMargin" id="3rf-B7-bkF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="fWi-oW-TyI" secondAttribute="bottom" id="6Xg-tD-TzF"/>
+                                        <constraint firstItem="fWi-oW-TyI" firstAttribute="leading" secondItem="xM2-UT-VST" secondAttribute="leadingMargin" id="LvD-3A-fpD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fWi-oW-TyI" secondAttribute="trailing" id="U1F-Or-s4u"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="192" height="177"/>
+                                <connections>
+                                    <outlet property="flagImageView" destination="1L8-Zk-egp" id="ojE-Ie-tYk"/>
+                                    <outlet property="stateNameLabel" destination="yEs-zR-ahl" id="gpT-uV-Enc"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="X06-2q-i44" id="ivd-Nj-8Nq"/>
+                            <outlet property="delegate" destination="X06-2q-i44" id="XBb-BJ-P18"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xqI-vY-9Rg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.333333333333336" y="174.77678571428569"/>
+        </scene>
+    </scenes>
+</document>
